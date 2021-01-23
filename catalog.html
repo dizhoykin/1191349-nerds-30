@@ -8,7 +8,7 @@
     <header>
       <nav>
         <a href="index.html">
-          <img src="https://via.placeholder.com/160x65" alt="Логотип дизайн-студии «Nerds»">
+          <img src="https://via.placeholder.com/160x65" alt="Логотип дизайн-студии «Nёrds»">
         </a>
         <ul>
           <li><a href="#">Студия</a></li>
@@ -16,21 +16,229 @@
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <a href="#">
-          <img src=https://via.placeholder.com/15x15 alt="">
-          Корзина
-        </a>
+        <a href="#">Корзина</a>
       </nav>
     </header>
 
     <main>
+      <h1>Магазин готовых шаблонов</h1>
 
+      <section>
+        <h2 hidden>Фильтр товаров</h2>
+        <form method="get" action="https://echo.htmlacademy.ru/">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <input type="text">
+            <input type="text">
+            <div>от
+              <output>0</output>
+              до
+              <output>15000</output>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Cетка:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="responsive" checked>
+                  Адаптивная
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="fixed">
+                  Фиксированная
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="adaptable">
+                  Резиновая
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="slider" checked>
+                  Слайдер
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="advantages">
+                  Блок преимуществ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="news" checked>
+                  Новости
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="gallery">
+                  Галерея
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="box">
+                  Корзина
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section>
+        <h2 hidden>Каталог проектов</h2>
+        <p>Сортировать:</p>
+        <ul>
+          <li>
+            <a href="#">По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По названию</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="#"></a> <!--down icon -->
+          </li>
+          <li>
+            <a href="#"></a> <!--up icon -->
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <div>
+              <input type="radio" name="sedona" value="picture 1">
+              <input type="radio" name="sedona" value="picture 2">
+              <input type="radio" name="sedona" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «Sedona»">
+            <div>
+              <a href="#">
+                <h3>Sedona</h3>
+              </a>
+              <p>Информационный сайт <br>для туристов</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <input type="radio" name="pink" value="picture 1">
+              <input type="radio" name="pink" value="picture 2">
+              <input type="radio" name="pink" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «Pink App»">
+            <div>
+              <a href="#">
+                <h3>Pink App</h3>
+              </a>
+              <p>Продуктовый лендинг <br>приложения для iOS и Android</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <input type="radio" name="barbershop" value="picture 1">
+              <input type="radio" name="barbershop" value="picture 2">
+              <input type="radio" name="barbershop" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «Barbershop»">
+            <div>
+              <a href="#">
+                <h3>Barbershop</h3>
+              </a>
+              <p>Сайт салона красоты. <br>Для мужчин, да.</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <input type="radio" name="mishka" value="picture 1">
+              <input type="radio" name="mishka" value="picture 2">
+              <input type="radio" name="mishka" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «Mishka»">
+            <div>
+              <a href="#">
+                <h3>Mishka</h3>
+              </a>
+              <p>Интернет-магазин <br>вязаных игрушек</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <input type="radio" name="a_plus" value="picture 1">
+              <input type="radio" name="a_plus" value="picture 2">
+              <input type="radio" name="a_plus" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «A Plus»">
+            <div>
+              <a href="#">
+                <h3>A Plus</h3>
+              </a>
+              <p>Лендинг курсов повышения <br>квалификации</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <input type="radio" name="kvast" value="picture 1">
+              <input type="radio" name="kvast" value="picture 2">
+              <input type="radio" name="kvast" value="picture 3">
+            </div>
+            <img src="https://via.placeholder.com/358x578" alt="Шаблон «Kvast»">
+            <div>
+              <a href="#">
+                <h3>Кваст</h3>
+              </a>
+              <p>Промо-сайт производителя <br>крафтового кваса</p>
+              <a href="#">9 900&#8381;</a>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a>1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">Следующая</a>
+          </li>
+        </ul>
+      </section>
     </main>
 
-
     <footer>
-      <iframe src="https://via.placeholder.com/1440x416" width="1440" height="416"></iframe>
-      <img src="https://via.placeholder.com/173x84" alt="Указатель местоположения">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="1440" height="416"></iframe>
       <section>
         <h2 hidden>Как нас найти</h2>
         <p>Nёrds Design Studio</p>
@@ -62,8 +270,9 @@
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label for="name">Ваше имя:</label>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+          <label>Ваше имя:
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
         </p>
         <p>
           <label>Ваш email:
