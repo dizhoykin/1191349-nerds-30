@@ -251,6 +251,7 @@ li {
 
 .footer-social li:active {
   background-color: var(--active-red);
+  opacity: 0.3;
 }
 
 .social-button img {
