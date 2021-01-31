@@ -2,6 +2,7 @@
 
 :root {
 --basic-black: #000000;
+--opacity-black: rgba(0,0,0,0.3);
 
 --basic-red: #FB565A;
 --hover-red: #E74246;
@@ -25,7 +26,6 @@
 --clarification-grey: #444444;
 --additional-grey: #666666;
 --toggler-grey: #ABABAB;
---catalog-grey: #4D4D4D;
 --border-grey: #C4C4C4;
 --sort-grey: #231F20;
 --input-grey: #D7DCDE;
@@ -50,6 +50,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--basic-black);
 }
 
 img {
@@ -80,6 +81,7 @@ li {
   background-color: var(--active-red);
   color: var(--opacity-white);
 }
+
 /* Header */
 .main-header, .slider {
   background-color: var(--basic-grey);
@@ -123,7 +125,7 @@ li {
   color: var(--text-grey);
 }
 
-.slider-item-tagline {
+.slider-item-tagline, .page-title {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
@@ -322,4 +324,104 @@ li {
 .modal-label input:focus::-webkit-input-placeholder, .modal-label textarea:focus::-webkit-input-placeholder {
   color: var(--clarification-grey);
   opacity: 1;
+}
+
+.filter legend, .products p:first-of-type, .product-popup h3 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter {
+  color: var(--text-grey);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.filter .price {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price input {
+  background-color: var(--basic-grey);
+}
+
+.product-browser {
+  opacity: 0.12;
+}
+
+.product-browser:hover {
+  opacity: 1;
+}
+
+li.product-item {
+  width: 360px;
+}
+
+.product-popup {
+  background-color: var(--basic-grey);
+  text-align: center;
+  line-height: 18px;
+  width: inherit;
+}
+
+.product-popup h3:hover {
+  color: var(--basic-red);
+}
+
+.product-popup h3:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.catalog-page .button, .filter .button {
+  background-color: var(--basic-grey);
+  color: var(--basic-black);
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.catalog-page .button:hover, .filter .button:hover {
+  background-color: var(--hover-grey);
+  color: var(--basic-black);
+}
+
+.catalog-page .button:active, .filter .button:active {
+  background-color: var(--active-grey);
+  color: var(--opacity-black);
+}
+
+.sort-type {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-black);
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+.sort-type a:hover {
+  color: var(--basic-black);
+  opacity: 0.6;
+}
+
+.sort-type a:active {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.direction-type path {
+  fill: var(--interactive-grey);
+  fill-opacity: 0.2;
+}
+
+.direction-type:hover path {
+  fill: var(--interactive-grey);
+  fill-opacity: 1;
+}
+
+.direction-type:active path {
+  fill: var(--sort-grey);
+  fill-opacity: 1;
 }
