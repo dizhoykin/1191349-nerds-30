@@ -290,21 +290,11 @@ img {
 /* Footer */
 
 .main-footer {
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-}
-
-.footer-social {
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
-  margin: 0;
-}
-
-.social-promo {
-  outline: 5px solid rgba(255, 0, 255, 0.7);
-  outline-offset: -5px;
+  width: 1160px;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 .footer-contacts p {
