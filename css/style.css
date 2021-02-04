@@ -99,7 +99,7 @@ img {
 
 /* Header */
 
-.main-header, .slider {
+.main-header, .slider, h1.page-title {
   background-color: var(--basic-grey);
 }
 
@@ -427,9 +427,21 @@ img {
   opacity: 1;
 }
 
+/* Catalog page title*/
+
+.catalog-page {
+   display: grid;
+   grid-template-columns: 400px 1fr;
+   align-content: start;
+}
+
+.page-title {
+  text-align: center;
+}
+
 /* Filter */
 
-.filter legend, .products p:first-of-type, .product-popup h3 {
+.filter legend, .project p:first-of-type, .project-popup h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -451,32 +463,39 @@ img {
   background-color: var(--basic-grey);
 }
 
-/* Product catalog */
+/* Projects catalog */
 
-.product-browser {
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 40px;
+}
+.project-browser {
   opacity: 0.12;
 }
 
-.product-browser:hover {
+.project-browser:hover {
   opacity: 1;
 }
 
-li.product-item {
+li.project-item {
   width: 360px;
 }
 
-.product-popup {
+.project-popup {
   background-color: var(--basic-grey);
   text-align: center;
   line-height: 18px;
   width: inherit;
 }
 
-.product-popup h3:hover {
+.project-popup h3:hover {
   color: var(--basic-red);
 }
 
-.product-popup h3:active {
+.project-popup h3:active {
   color: var(--basic-black);
   opacity: 0.3;
 }

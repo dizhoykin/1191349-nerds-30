@@ -353,7 +353,7 @@ template {
     list-style: none;
   }
 
-  p, ul {
+  p, ul, h1 {
     margin-block-start: 0;
     margin-block-end: 0;
 
