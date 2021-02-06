@@ -173,10 +173,14 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 90px;
   width: 1160px;
-  margin-left:  auto;
-  margin-right: auto;
   border-bottom: 2px solid var(--basic-grey);
 }
+
+.products-list-wrapper {
+  margin-left:  auto;
+  margin-right: auto;
+}
+
 
 .products-item h3 {
   font-size: 24px;
