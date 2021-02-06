@@ -439,6 +439,11 @@ img {
    align-content: start;
 }
 
+.catalog-page-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-title {
   text-align: center;
 }
@@ -474,7 +479,8 @@ img {
   grid-template-columns: 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
-  column-gap: 40px;
+  column-gap: 41px;
+  row-gap: 31px;
 }
 .project-browser {
   opacity: 0.12;
@@ -493,6 +499,25 @@ li.project-item {
   text-align: center;
   line-height: 18px;
   width: inherit;
+  width: 360px;
+  height: 231px;
+}
+
+.project-popup h3 {
+  padding-top: 26px;
+}
+
+.project-popup .button {
+  background-color: var(--basic-red);
+}
+
+.project-popup .button:hover {
+  background-color: var(--hover-red);
+}
+
+ .project-popup. button:active {
+  background-color: var(--active-red);
+  color: var(--opacity-white);
 }
 
 .project-popup h3:hover {
@@ -506,19 +531,19 @@ li.project-item {
 
 /* Catalog page buttons*/
 
-.catalog-page .button, .filter .button {
+ .filter .button {
   background-color: var(--basic-grey);
   color: var(--basic-black);
   line-height: 18px;
   font-weight: 500;
 }
 
-.catalog-page .button:hover, .filter .button:hover {
+.filter .button:hover {
   background-color: var(--hover-grey);
   color: var(--basic-black);
 }
 
-.catalog-page .button:active, .filter .button:active {
+.filter .button:active {
   background-color: var(--active-grey);
   color: var(--opacity-black);
 }
