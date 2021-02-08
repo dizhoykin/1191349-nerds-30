@@ -140,6 +140,7 @@ img {
 .main-navigation-wrapper {
   width: 100%;
   margin-bottom: 78px;
+  margin-top: 75px;
 }
 
 .site-navigation {
@@ -147,10 +148,9 @@ img {
   margin: 0;
   padding: 0 20px;
 
-
-
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* User-navigation */
@@ -205,7 +205,6 @@ img {
 
 .products {
   border-bottom: 2px solid var(--basic-grey);
-  margin-bottom: 80px;
 }
 
 .products-list {
@@ -213,9 +212,10 @@ img {
   margin: 0;
   padding: 0;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
-.products-item {
+.products-item {s
   width: 300px;
   text-align: left;
 }
@@ -266,6 +266,8 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 73px;
+  margin-top: 40px;
+  align-content: flex-start;
 }
 
 .about-text {
@@ -280,16 +282,13 @@ img {
   color: var(--basic-black);
 
   margin: 0;
-  margin-top: 75px;
+  margin-top: 25px;
   margin-bottom: 32px;
-}
-
-.about-text .about-principles {
-  margin-bottom: 40px;
 }
 
 .about-text .about-compentencies {
   margin-bottom: 23px;
+  margin-top: 40px;
 }
 
 .about-text strong, .about-graph p, .about-graph dd {
@@ -319,6 +318,8 @@ img {
 
 .about-graph p {
   text-align: center;
+  margin-bottom: 31px;
+  margin-top: 20px;
 }
 
 .about-graph-wrapper {
@@ -352,6 +353,9 @@ img {
 .partners-list {
   display: flex;
   justify-content: space-around;
+  height: 180px;
+  margin-bottom: 80px;
+  border-bottom: 2px solid var(--basic-grey);
 }
 
 .partner-item {
@@ -515,17 +519,18 @@ img {
 
 .catalog-page {
    display: grid;
-   grid-template-columns: 400px 1fr;
+   grid-template-columns: 260px 1fr;
    align-content: start;
 }
 
 .page-title {
   text-align: center;
+  margin-bottom: 108px;
 }
 
 /* Filter */
 
-.filter legend, .project p:first-of-type, .project-popup h3 {
+.filter legend, .sort p:first-of-type, .project-popup h3 {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -536,6 +541,39 @@ img {
   color: var(--text-grey);
   font-size: 16px;
   line-height: 19px;
+  margin-top: 55px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.filter fieldset:nth-child(1) {
+  margin-bottom: 54px;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-bottom: 43px;
+}
+
+.filter fieldset:nth-child(3) {
+  margin-bottom: 48px;
+}
+
+.filter legend {
+  margin-bottom: 14px;
+}
+
+fieldset:first-child legend {
+  margin-bottom: 48px;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 18px;
 }
 
 .filter .price {
@@ -549,21 +587,69 @@ img {
 
 /* Catalog page buttons*/
 
- .filter .button, .catalog-page .button {
+ .filter .button, .pagination-item .button{
   background-color: var(--basic-grey);
   color: var(--basic-black);
   line-height: 18px;
   font-weight: 500;
 }
 
-.filter .button:hover, .catalog-page .button:hover {
+.filter .button:hover, .pagination-item .button:hover {
   background-color: var(--hover-grey);
   color: var(--basic-black);
 }
 
-.filter .button:active, .catalog-page .button:active {
+.filter .button:active, .pagination-item .button:active {
   background-color: var(--active-grey);
   color: var(--opacity-black);
+}
+
+.pagination {
+  display: flex;
+  justify-content: start;
+  width: 460px;
+  margin-left: 140px;
+  margin-bottom: 60px;
+}
+
+.pagination-item .button {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-right: 11px;
+}
+
+.next .button {
+  width: 260px;
+}
+
+.sort {
+  margin-left: 140px;
+  margin-bottom: 55px;
+  margin-top: 55px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sort p {
+  width: 360px;
+  margin-right: 40px;
+}
+
+.sort-directions {
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+li .direction-type:last-child {
+  margin-left: 18px;
 }
 
 .sort-type {
@@ -572,7 +658,8 @@ img {
   color: var(--basic-black);
   opacity: 0.3;
   text-transform: uppercase;
-}
+
+  }
 
 .sort-type a:hover {
   color: var(--basic-black);
@@ -599,14 +686,24 @@ img {
   fill-opacity: 1;
 }
 
+.sort-kinds {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+}
+
 /* Projects catalog */
 
 .projects-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 41px;
-  row-gap: 31px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 55px;
+  justify-content: flex-end;
 }
+
 .project-browser {
   opacity: 0.12;
 }
@@ -615,8 +712,15 @@ img {
   opacity: 1;
 }
 
-li.project-item {
+.project-item {
   width: 360px;
+  min-height: 618px;
+  margin-right: 42px;
+  margin-bottom: 31px;
+}
+
+.project-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .project-popup {
