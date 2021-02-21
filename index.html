@@ -16,6 +16,7 @@
   </head>
 
   <body class="page-body">
+
     <header class="main-header">
       <nav class="main-navigation">
         <div class="main-navigation-wrapper">
@@ -43,7 +44,7 @@
     <ul class="slider">
       <li class="slider-item displayed container">
         <div class="slider-item-text">
-          <p class="slider-item-tagline">Долго, дорого, <br>скурпулезно.</p>
+          <p class="slider-item-tagline">Долго, дорого, <br>скрупулезно.</p>
           <p>Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.</p>
           <a class="button slider-button" href="#">Узнать больше</a>
         </div>
@@ -73,10 +74,10 @@
     </ul>
 
     <main class="container">
-      <h1 class="non-displayed">Дизайн-студия Нёрдс</h1>
+      <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
 
       <section class="products">
-        <h2 class="non-displayed">Наши услуги</h2>
+        <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="products-list">
           <li class="products-item">
             <img src="img/decoration/decoration-websites.jpg" width="300" height="146" alt="Веб-сайты">
@@ -100,12 +101,12 @@
       </section>
 
       <section class="about">
-        <h2 class="non-displayed">О компании</h2>
+        <h2 class="visually-hidden">О компании</h2>
         <div class="about-text">
           <p class="about-main">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
           <p class="about-principles">Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br>превыше креатива. Работаем не покладая рук, как роботы.</p>
           <p class="about-compentencies"><strong>Выполняем заказы на разработку:</strong></p>
-          <ul>
+          <ul class="about-list">
             <li>Веб-сайтов любой сложности</li>
             <li>Мобильных приложений для iOS и Android</li>
             <li>Слайдшоу и видео для корпоративных презентаций</li>
@@ -132,7 +133,7 @@
       </section>
 
       <section class="partners-list">
-        <h2 class="non-displayed">Наши партнеры</h2>
+        <h2 class="visually-hidden">Наши партнеры</h2>
         <div class="partner-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo/logo-htmlacademy.png" width="199" height="68" alt="htmlacademy.ru">
@@ -156,13 +157,37 @@
       </section>
     </main>
 
+    <section class="modal">
+      <h2>Напишите нам</h2>
+      <a href="#" class="close">
+        <img src="img/decoration/close-cross.png" alt="Закрыть">
+      </a>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-form">
+          <p class="modal-item">
+            <label for="modal-name" class="modal-label">Ваше имя:</label>
+            <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          </p>
+          <p class="modal-item">
+            <label for="modal-email" class="modal-label">Ваш email:</label>
+            <input id="modal-email" type="email" name="email" placeholder="email@example.com" required>
+          </p>
+          <p class="modal-item">
+            <label for="modal-text" class="modal-label">Текст письма:</label>
+            <textarea id="modal-text" name="text" placeholder="В свободной форме" required></textarea>
+          </p>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
+
     <iframe src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
 
     <section class="footer-contacts">
-      <h2 class="non-displayed">Как нас найти</h2>
+      <h2 class="visually-hidden">Как нас найти</h2>
       <p class="company-name">Nёrds Design Studio</p>
       <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-      <p>тел. +7 (812) 275-75-75</p>
+      <p class="tel">тел. +7 (812) 275-75-75</p>
       <button class="button" type="button">Напишите нам</button>
     </section>
 
@@ -170,7 +195,7 @@
     <footer class="main-footer">
       <div class="container">
         <section class="footer-social">
-          <h2 class="non-displayed">Мы в соцсетях</h2>
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul>
             <li>
               <a class="social-button" href="#">
@@ -196,29 +221,6 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2>Напишите нам</h2>
-        <a href="#" class="close">
-          <img src="img/decoration/close-cross.png" alt="Закрыть">
-        </a>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="modal-label">Ваше имя:
-            <input type="text" name="name" placeholder="Имя Фамилия" required>
-          </label>
-        </p>
-        <p>
-          <label class="modal-label">Ваш email:
-            <input type="email" name="email" placeholder="email@example.com" required>
-          </label>
-        </p>
-        <p>
-          <label class="modal-label">Текст письма:
-            <textarea name="text" placeholder="В свободной форме" required></textarea>
-          </label>
-        </p>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </section>
+
   </body>
 </html>
