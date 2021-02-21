@@ -41,81 +41,75 @@
       <h1 class="page-title">Магазин готовых шаблонов</h1>
     </header>
 
-
     <main class="catalog-page container">
       <section class="filters">
         <h2 hidden>Фильтр товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
-          <fieldset>
+
+          <fieldset class="filter-item">
             <legend>Стоимость:</legend>
-              <div class="price">
-                <label>от
-                  <input type="number" name="left_border" min="0" max="15000" placeholder="0">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
                 </label>
-                <label>до
-                  <input type="number" name="right_border" min="0" max="15000" placeholder="15000">
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
                 </label>
               </div>
+            </div>
           </fieldset>
-          <fieldset>
+
+          <fieldset class="filter-radio">
             <legend>Cетка:</legend>
             <ul>
-              <li>
-                <label>
-                  <input type="radio" name="grid" value="adaptable" checked>
-                  Адаптивная
-                </label>
+              <li class="filter-option">
+                <input id="adaptable" class="visually-hidden filter-input-radio" type="radio" name="grid" value="adaptable" checked>
+                <label for="adaptable">Адаптивная</label>
               </li>
-              <li>
-                <label>
-                  <input type="radio" name="grid" value="fixed">
-                  Фиксированная
-                </label>
+              <li class="filter-option">
+                <input id="fixed" class="visually-hidden filter-input-radio" type="radio" name="grid" value="fixed">
+                <label for="fixed" >Фиксированная</label>
               </li>
-              <li>
-                <label>
-                  <input type="radio" name="grid" value="responsible">
-                  Резиновая
-                </label>
+              <li class="filter-option">
+                <input id="responsible" class="visually-hidden filter-input-radio" type="radio" name="grid" value="responsible">
+                <label for="responsible">Резиновая</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-checkbox">
             <legend>Особенности:</legend>
             <ul>
-              <li>
-                <label>
-                  <input type="checkbox" name="slider" checked>
-                  Слайдер
-                </label>
+              <li class="filter-option">
+                <input id="slider" class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" checked>
+                <label for="slider" >Слайдер</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="advantages">
-                  Блок преимуществ
-                </label>
+              <li class="filter-option">
+                <input id="advantages" class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages">
+                <label for="advantages">Блок преимуществ</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="news" checked>
-                  Новости
-                </label>
+              <li class="filter-option">
+                <input id="news" class="visually-hidden filter-input-checkbox" type="checkbox" name="news" checked>
+                <label for="news">Новости</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="gallery">
-                  Галерея
-                </label>
+              <li class="filter-option">
+                <input id="gallery" class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery">
+                <label for="gallery">Галерея</label>
               </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="box">
-                  Корзина
-                </label>
+              <li class="filter-option">
+                <input id="cart" class="visually-hidden filter-input-checkbox" type="checkbox" name="box">
+                <label for="cart" >Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="submit">Показать</button>
+          <button class="button filter-button" type="submit">Показать</button>
         </form>
       </section>
 
@@ -125,7 +119,7 @@
           <p class="sort-title">Сортировать:</p>
           <ul class="sort-kinds">
             <li class="sort-type">
-              <a href="#">По цене</a>
+              <a class="sort-current" href="#">По цене</a>
             </li>
             <li class="sort-type">
               <a href="#">По типу</a>
@@ -137,7 +131,7 @@
 
           <ul class="sort-directions">
             <li>
-              <a class="direction-type" href="#">
+              <a class="direction-type sort-current" href="#">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11"/>
                 </svg>
@@ -229,7 +223,7 @@
 
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="button">1</a>
+            <a class="button page-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="button" href="#">2</a>
@@ -244,13 +238,37 @@
       </section>
     </main>
 
+    <section class="modal">
+      <h2>Напишите нам</h2>
+      <a href="#" class="close">
+        <img src="img/decoration/close-cross.png" alt="Закрыть">
+      </a>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-form">
+          <p class="modal-item">
+            <label for="modal-name" class="modal-label">Ваше имя:</label>
+            <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="modal-item">
+            <label for="modal-email" class="modal-label">Ваш email:</label>
+            <input id="modal-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p class="modal-item">
+            <label for="modal-text" class="modal-label">Текст письма:</label>
+            <textarea id="modal-text" name="text" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
+
     <iframe src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
 
     <section class="footer-contacts">
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="company-name">Nёrds Design Studio</p>
       <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-      <p>тел. +7 (812) 275-75-75</p>
+      <p class="tel">тел. +7 (812) 275-75-75</p>
       <button class="button" type="button">Напишите нам</button>
     </section>
 
@@ -283,29 +301,5 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2>Напишите нам</h2>
-        <a href="#" class="close">
-          <img src="img/decoration/close-cross.png" alt="Закрыть">
-        </a>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="modal-label">Ваше имя:
-            <input type="text" name="name" placeholder="Имя Фамилия" required>
-          </label>
-        </p>
-        <p>
-          <label class="modal-label">Ваш email:
-            <input type="email" name="email" placeholder="email@example.com" required>
-          </label>
-        </p>
-        <p>
-          <label class="modal-label">Текст письма:
-            <textarea name="text" placeholder="В свободной форме" required></textarea>
-          </label>
-        </p>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </section>
   </body>
   </html>
