@@ -1333,6 +1333,11 @@ li .direction-type:last-child {
 }
 
 .project-popup {
+  display: none;
+}
+
+.project-item:hover .project-popup {
+  display: block;
   background-color: var(--basic-grey);
   text-align: center;
   line-height: 18px;
