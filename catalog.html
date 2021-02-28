@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&;subset=latin,cyrillic;display=swap">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-minimized.css" rel="stylesheet">
 
   </head>
 
@@ -51,10 +51,10 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                  <div class="bar" style="width: 70%; margin-left: 0"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 5%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 60%"></div>
               </div>
               <div class="price-controls">
                 <label class="min-price">
@@ -89,7 +89,7 @@
             <ul>
               <li class="filter-option">
                 <input id="slider" class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" checked>
-                <label for="slider" >Слайдер</label>
+                <label for="slider">Слайдер</label>
               </li>
               <li class="filter-option">
                 <input id="advantages" class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages">
@@ -149,7 +149,6 @@
 
         <ul class="projects-list">
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-sedona.jpg" width="358" height="578" alt="Шаблон «Sedona»">
             <div class="project-popup">
               <a href="#">
@@ -161,9 +160,8 @@
           </li>
 
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-pink.jpg" width="358" height="578" alt="Шаблон «Pink App»">
-            <div class="project-popup" hidden>
+            <div class="project-popup visually-hidden">
               <a href="#">
                 <h3>Pink App</h3>
               </a>
@@ -173,9 +171,8 @@
           </li>
 
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-borodinski.jpg" width="358" height="578" alt="Шаблон «Barbershop»">
-            <div class="project-popup" hidden>
+            <div class="project-popup visually-hidden">
               <a href="#">
                 <h3>Barbershop</h3>
               </a>
@@ -185,9 +182,8 @@
           </li>
 
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-mishka.jpg" width="358" height="578" alt="Шаблон «Mishka»">
-            <div class="project-popup" hidden>
+            <div class="project-popup visually-hidden">
               <a href="#">
                 <h3>Mishka</h3>
               </a>
@@ -197,9 +193,8 @@
           </li>
 
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-aplus.jpg" width="358" height="578" alt="Шаблон «A Plus»">
-            <div class="project-popup" hidden>
+            <div class="project-popup visually-hidden">
               <a href="#">
                 <h3>A Plus</h3>
               </a>
@@ -209,9 +204,8 @@
           </li>
 
           <li class="project-item">
-            <img class="project-browser" src="img/decoration/browser.png" width="360" height="40" alt="Браузер">
             <img src="img/catalog/img-kvast.jpg" width="358" height="578" alt="Шаблон «Kvast»">
-            <div class="project-popup" hidden>
+            <div class="project-popup visually-hidden">
               <a href="#">
                 <h3>Кваст</h3>
               </a>
@@ -220,7 +214,6 @@
             </div>
           </li>
         </ul>
-
         <ul class="pagination">
           <li class="pagination-item">
             <a class="button page-current">1</a>
@@ -240,9 +233,7 @@
 
     <section class="modal">
       <h2>Напишите нам</h2>
-      <a href="#" class="close">
-        <img src="img/decoration/close-cross.png" alt="Закрыть">
-      </a>
+      <button class="close-btn" type="button" aria-label="Закрыть"></button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-form">
           <p class="modal-item">
@@ -262,14 +253,16 @@
       </form>
     </section>
 
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
-
-    <section class="footer-contacts">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="company-name">Nёrds Design Studio</p>
-      <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-      <p class="tel">тел. +7 (812) 275-75-75</p>
-      <button class="button" type="button">Напишите нам</button>
+    <section class="map">
+      <h2 class="visually-hidden">Место расположения</h2>
+      <iframe class = "map-frame" src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
+      <section class="contacts">
+        <h3 class="visually-hidden">Как нас найти</h3>
+        <p class="company-name">Nёrds Design Studio</p>
+        <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+        <p class="tel">тел. +7 (812) 275-75-75</p>
+        <button class="button" type="button">Напишите нам</button>
+      </section>
     </section>
 
     <footer class="main-footer">
@@ -279,17 +272,17 @@
           <ul>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-vk.png" alt="Вконтакте">
+                <img src="img/icons/icon-vk.svg" alt="Вконтакте">
               </a>
             </li>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-fb.png" alt="Фейсбук">
+                <img src="img/icons/icon-fb.svg" alt="Фейсбук">
               </a>
             </li>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-insta.png" alt="Инстаграм">
+                <img src="img/icons/icon-insta.svg" alt="Инстаграм">
               </a>
             </li>
           </ul>

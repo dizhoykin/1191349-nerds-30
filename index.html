@@ -42,29 +42,29 @@
 
     <section class="slider">
       <ul class="slider-list">
-        <li class="slider-item slide-current container">
+        <li class="slider-item container first-slide-background">
           <div class="slider-item-text">
             <p class="slider-item-tagline">Долго, дорого, <br>скрупулезно.</p>
-            <p>Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.</p>
+            <p class="slider-item-description">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.</p>
             <a class="button slide-button" href="#">Узнать больше</a>
           </div>
-          <img src="img/slider/nerds-slide1.png" width="760" height="431" alt="Слайд 1">
+          <!-- <img src="img/slider/nerds-slide1.png" width="760" height="431" alt="Слайд 1"> -->
         </li>
-        <li class="slider-item container">
+        <li class="slider-item container second-slide-background visually-hidden">
           <div class="slider-item-text">
-            <p class="slider-item-tagline">Любим математику как никто другой</p>
-            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <p class="slider-item-tagline">Любим математику <br> как никто другой</p>
+            <p class="slider-item-description">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций</p>
             <a class="button slide-button" href="#">Узнать больше</a>
           </div>
-          <img src="img/slider/nerds-slide2.png" width="760" height="431" alt="Слайд 2">
+          <!-- <img src="img/slider/nerds-slide2.png" width="760" height="431" alt="Слайд 2"> -->
         </li>
-        <li class="slider-item container">
+        <li class="slider-item container third-slide-background visually-hidden">
           <div class="slider-item-text">
             <p class="slider-item-tagline">Только ночь, <br>только хардкор</p>
-            <p>Работать днем, как все? Мы против этого. <br>Ближе к полуночи работа только начинается.</p>
+            <p class="slider-item-description">Работать днем, как все? Мы против этого. <br>Ближе к полуночи работа только начинается.</p>
             <a class="button slide-button" href="#">Узнать больше</a>
           </div>
-          <img src="img/slider/nerds-slide3.png" width="760" height="431" alt="Слайд 3">
+          <!-- <img src="img/slider/nerds-slide3.png" width="760" height="431" alt="Слайд 3"> -->
         </li>
       </ul>
       <div class="slider-controls">
@@ -89,7 +89,7 @@
           <li class="products-item">
             <img src="img/decoration/decoration-applications.jpg" width="300" height="146" alt="Приложения">
             <h3>Приложения</h3>
-            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+            <p>Покорите топ-10 приложений <br> в AppStore и Google Play</p>
             <a class="button button-applications" href="#">Заказать</a>
           </li>
           <li class="products-item">
@@ -137,7 +137,7 @@
         <h2 class="visually-hidden">Наши партнеры</h2>
         <div class="partner-item">
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo/logo-htmlacademy.png" width="199" height="68" alt="htmlacademy.ru">
+            <img src="img/logo/logo-htmlacademy.png" width="199" height="68" alt="htmlacademy.ru">
           </a>
         </div>
         <div class="partner-item">
@@ -160,10 +160,8 @@
 
     <section class="modal">
       <h2>Напишите нам</h2>
-      <a href="#" class="close">
-        <img src="img/decoration/close-cross.png" alt="Закрыть">
-      </a>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <button class="close-btn" type="button" aria-label="Закрыть"></button>
+        <form action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-form">
           <p class="modal-item">
             <label for="modal-name" class="modal-label">Ваше имя:</label>
@@ -182,14 +180,16 @@
       </form>
     </section>
 
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
-
-    <section class="footer-contacts">
-      <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="company-name">Nёrds Design Studio</p>
-      <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-      <p class="tel">тел. +7 (812) 275-75-75</p>
-      <button class="button" type="button">Напишите нам</button>
+    <section class="map">
+      <h2 class="visually-hidden">Место расположения</h2>
+      <iframe class = "map-frame" src="https://yandex.ru/map-widget/v1/-/CCUIzWEhpB" width="100%" height="416"></iframe>
+      <section class="contacts">
+        <h3 class="visually-hidden">Как нас найти</h3>
+        <p class="company-name">Nёrds Design Studio</p>
+        <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+        <p class="tel">тел. +7 (812) 275-75-75</p>
+        <button class="button" type="button">Напишите нам</button>
+      </section>
     </section>
 
     <footer class="main-footer">
@@ -199,17 +199,17 @@
           <ul>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-vk.png" alt="Вконтакте">
+                <img src="img/icons/icon-vk.svg" alt="Вконтакте">
               </a>
             </li>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-fb.png" alt="Фейсбук">
+                <img src="img/icons/icon-fb.svg" alt="Фейсбук">
               </a>
             </li>
             <li>
               <a class="social-button" href="#">
-                <img src="img/icons/icon-insta.png" alt="Инстаграм">
+                <img src="img/icons/icon-insta.svg" alt="Инстаграм">
               </a>
             </li>
           </ul>
