@@ -14,7 +14,8 @@ try {
   isStorageSupport = false;
 }
 
-modalShowButton.addEventListener("click", function () {
+modalShowButton.addEventListener("click", function (evt) {
+  evt.preventDefault(evt);
   modalWindow.classList.add("modal-show");
   modalWindow.classList.add("modal-show-animation");
 
