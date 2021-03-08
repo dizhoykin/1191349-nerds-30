@@ -846,7 +846,9 @@ img {
 .modal-item input, .modal-item textarea {
   border-color: var(--input-grey);
   border-radius: 3px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
 
@@ -1230,7 +1232,9 @@ input:invalid {
 .page-current.button {
   background-color: var(--basic-white);
   border: 3px solid var(--btn-grey);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
 }
 
 .next .button {
