@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&;subset=latin,cyrillic;display=swap">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-minimized.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
 
@@ -159,15 +159,15 @@
     <section class="modal">
       <h2>Напишите нам</h2>
       <button class="close-btn" type="button" aria-label="Закрыть"></button>
-        <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="modal-form">
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-container">
           <p class="modal-item">
             <label for="modal-name" class="modal-label">Ваше имя:</label>
-            <input id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="modal-name" id="modal-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p class="modal-item">
             <label for="modal-email" class="modal-label">Ваш email:</label>
-            <input id="modal-email" type="email" name="email" placeholder="email@example.com">
+            <input class="modal-email" id="modal-email" type="email" name="email" placeholder="email@example.com">
           </p>
           <p class="modal-item">
             <label for="modal-text" class="modal-label">Текст письма:</label>
@@ -224,6 +224,8 @@
         </section>
       </div>
     </footer>
+
+    <script src="js/modal.js"></script>
 
   </body>
 </html>

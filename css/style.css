@@ -752,7 +752,19 @@ img {
   z-index: 2;
 }
 
-.modal-form {
+.modal-show {
+  display: grid;
+}
+
+.modal-show-animation {
+  animation: bounce 0.6s;
+}
+
+.modal-error-animation {
+  animation: shake 0.6s;
+}
+
+.modal-container {
   width: 760px;
   display: flex;
   flex-wrap: wrap;
@@ -801,7 +813,10 @@ img {
   font-weight: 700;
   margin-block-start: 0;
   margin-block-end: 0;
+  margin: 0;
   margin-bottom: 37px;
+
+  max-width: 700px;
 }
 
 .modal-label {
@@ -899,7 +914,7 @@ input:invalid {
   border-color: var(--hover-red);
 }
 
-.modal-form + .button {
+.modal-container + .button {
   display: block;
   width: 260px;
   height: 60px;
@@ -1421,4 +1436,46 @@ li .direction-type:last-child {
 .project-popup h3:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
