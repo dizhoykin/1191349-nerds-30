@@ -699,7 +699,6 @@ img {
 }
 
 .contacts p {
-  display: block;
   margin-left: 46px;
   margin-top: 20px;
   color: var(--additional-grey);
