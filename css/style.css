@@ -699,6 +699,7 @@ img {
 }
 
 .contacts p {
+  display: block;
   margin-left: 46px;
   margin-top: 20px;
   color: var(--additional-grey);
@@ -710,6 +711,10 @@ img {
 .tel {
   padding-bottom: 37px;
   max-width: 219px;
+}
+
+.tel a {
+  color: var(--additional-grey);
 }
 
 .contacts .company-name {
@@ -1003,6 +1008,10 @@ input:invalid {
   opacity: 0.4;
 }
 
+.filter-input-checkbox:checked + label::before {
+  background-image: none;
+}
+
 .filter-input-checkbox:focus + label::before, .filter-input-radio:focus + label::before {
   outline: 5px auto var(--basic-black);
 }
@@ -1014,6 +1023,7 @@ input:invalid {
   top: -5px;
   width: 25px;
   height: 25px;
+  background-color: var(--basic-white);
   background-image: url("../img/decoration/radio-off.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1032,6 +1042,10 @@ input:invalid {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.4;
+}
+
+.filter-input-radio:checked + label::before {
+  background-image: none;
 }
 
 .filter-input-checkbox:hover, .filter-input-checkbox + label:hover::before {
@@ -1182,6 +1196,15 @@ input:invalid {
   border: none;
   border-radius: 3px;
   background: var(--basic-grey);
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 /* Catalog page buttons*/
